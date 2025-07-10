@@ -1,0 +1,24 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "formulahendry.auto-rename-tag",
+    "christian-kohler.path-intellisense",
+    "ms-vscode.vscode-json",
+    "bradlc.vscode-tailwindcss",
+    "ritwickdey.liveserver",
+    "christian-kohler.npm-intellisense",
+    "streetsidesoftware.code-spell-checker",
+    "oderwat.indent-rainbow",
+    "johnpapa.vscode-peacock",
+    "zignd.html-css-class-completion",
+    "ms-vscode.vscode-css-peek",
+    "dsznajder.es7-react-js-snippets",
+    "bradlc.vscode-emmet"
+  ],
+  "unwantedRecommendations": [
+    "hookyqr.beautify",
+    "ms-vscode.vscode-typescript",
+    "ms-vscode.vscode-tslint"
+  ]
+}

@@ -1,11 +1,14 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import NotFound from './pages/NotFound';
 import Page from './pages/Page';
 
 function App() {
   return (
-    <>
-      <Page />
-    </>
+    <Routes>
+      <Route path="/" element={<Page />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }
 

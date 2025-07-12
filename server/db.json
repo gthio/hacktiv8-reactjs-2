@@ -1,0 +1,126 @@
+{
+  "cafes": [
+    {
+      "id": 1,
+      "cafe_id": "PIM2-JS",
+      "name": "Pondok Indah Mall 2",
+      "city": "Jakarta Selatan",
+      "province": "DKI Jakarta",
+      "sales": 8800000
+    },
+    {
+      "id": 2,
+      "cafe_id": "SH-TGR",
+      "name": "Soekarno Hatta - 2F",
+      "city": "Tangerang",
+      "province": "Banten",
+      "sales": 8800000
+    },
+    {
+      "id": 3,
+      "cafe_id": "BIP-BDG",
+      "name": "Bandung Indah Plaza",
+      "city": "Bandung",
+      "province": "Jawa Barat",
+      "sales": 8800000
+    },
+    {
+      "id": 4,
+      "cafe_id": "PS-JS",
+      "name": "Plaza Senayan",
+      "city": "Jakarta Selatan",
+      "province": "DKI Jakarta",
+      "sales": 9200000
+    },
+    {
+      "id": 5,
+      "cafe_id": "GI-JP",
+      "name": "Grand Indonesia",
+      "city": "Jakarta Pusat",
+      "province": "DKI Jakarta",
+      "sales": 8900000
+    },
+    {
+      "id": 6,
+      "cafe_id": "PM-SMG",
+      "name": "Paragon Mall",
+      "city": "Semarang",
+      "province": "Jawa Tengah",
+      "sales": 8700000
+    },
+    {
+      "id": 7,
+      "cafe_id": "TP-SBY",
+      "name": "Tunjungan Plaza",
+      "city": "Surabaya",
+      "province": "Jawa Timur",
+      "sales": 8600000
+    },
+    {
+      "id": 8,
+      "cafe_id": "HM-YGY",
+      "name": "Hartono Mall",
+      "city": "Yogyakarta",
+      "province": "DI Yogyakarta",
+      "sales": 8800000
+    },
+    {
+      "id": 9,
+      "cafe_id": "BP-BPN",
+      "name": "Balikpapan Plaza",
+      "city": "Balikpapan",
+      "province": "Kalimantan Timur",
+      "sales": 8500000
+    },
+    {
+      "id": 10,
+      "cafe_id": "PM-MKS",
+      "name": "Panakkukang Mall",
+      "city": "Makassar",
+      "province": "Sulawesi Selatan",
+      "sales": 8600000
+    },
+    {
+      "id": 11,
+      "cafe_id": "NH-BTM",
+      "name": "Nagoya Hill",
+      "city": "Batam",
+      "province": "Kepulauan Riau",
+      "sales": 8700000
+    },
+    {
+      "id": 12,
+      "cafe_id": "PI-PLM",
+      "name": "Palembang Icon",
+      "city": "Palembang",
+      "province": "Sumatera Selatan",
+      "sales": 8800000
+    }
+  ],
+  "cafe-details": [
+    {
+      "id": "PI-PLM",
+      "cafe_id": "PI-PLM",
+      "chartTitle": "Sales and Expenses Over Time",
+      "categories": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July"
+      ],
+      "series": [
+        {
+          "name": "Monthly Sales ($)",
+          "data": [6500, 5900, 8000, 8200, 5600, 5500, 7000]
+        },
+        {
+          "name": "Monthly Expenses ($)",
+          "data": [2800, 4800, 4000, 1900, 8600, 2600, 3000]
+        }
+      ]
+    }
+  ]
+}

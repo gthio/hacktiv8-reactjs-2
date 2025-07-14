@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 export function useCafeDetail(id) {
   const [cafe, setCafe] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  async function fetchCafeDetail() {
+  const fetchCafeDetail = useCallback(async () => {
     try {
       setLoading(true);
       const response = await fetch(`http://localhost:3001/cafes?cafe_id=${id}`);
@@ -23,13 +23,15 @@ export function useCafeDetail(id) {
     } finally {
       setLoading(false);
     }
-  }
+  }, [id]);
 
   useEffect(() => {
     if (id) {
+      console.log(`useCafeDetail: before`);
       fetchCafeDetail();
+      console.log(`useCafeDetail: after`);
     }
-  }, [id]);
+  }, [id, fetchCafeDetail]);
 
   return { cafe, loading, error, refetch: fetchCafeDetail };
 }

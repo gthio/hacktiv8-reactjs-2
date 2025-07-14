@@ -1,20 +1,13 @@
-import { useSearchParams } from 'react-router-dom';
 import CafeList from '../components/CafeList';
 import CafeSummary from '../components/CafeSummary';
-import Filter from '../components/Filter';
-import { useCafes } from '../hooks/useCafes';
+import { useCafeList } from '../hooks/useCafeList'; // Add this import
 
 function CafePage() {
-  const [searchParams] = useSearchParams();
-  const { cafes, loading, error } = useCafes(searchParams);
-
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
+  const { cafes } = useCafeList(); // Use the hook to get cafes data
 
   return (
     <div>
       <h1>Dashboard</h1>
-      <Filter />
       <CafeSummary cafes={cafes} />
       <CafeList cafes={cafes} />
     </div>

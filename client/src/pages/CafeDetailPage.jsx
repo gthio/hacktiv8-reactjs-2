@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { useCafeDetail } from '../hooks/useCafeDetail';
+import { useCafe } from '../hooks/useCafe';
 
 function CafeDetailPage() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { cafe, loading, error } = useCafeDetail(id);
+  const { cafe, loading, error } = useCafe(id);
 
   // Only log when cafe data actually changes
   useEffect(() => {

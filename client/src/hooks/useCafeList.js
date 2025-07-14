@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export function useCafeList() {
+export function useCafeList(criteria = null) {
   const [cafes, setCafes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -8,7 +8,15 @@ export function useCafeList() {
   async function fetchCafeList() {
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:3001/cafes`);
+      let url = `http://localhost:3001/cafes`;
+
+      if (criteria) {
+        url += `?q=${criteria}`;
+      }
+
+      console.log(url);
+
+      const response = await fetch(url);
 
       if (!response.ok) {
         throw new Error('Failed to fetch cafe list');
@@ -27,7 +35,7 @@ export function useCafeList() {
 
   useEffect(() => {
     fetchCafeList();
-  }, []);
+  }, [criteria]);
 
   return {
     cafes,

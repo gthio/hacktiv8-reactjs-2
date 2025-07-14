@@ -1,7 +1,6 @@
-import { formatCurrency } from '../utils/currency';
+import { formatCurrency } from '../utils/formatCurrency';
 
-const CafeSummary = ({ cafes = [] }) => {
-  // Calculate total sales from filtered data
+const CafeSummarySales = ({ cafes = [] }) => {
   const totalSales = cafes.reduce((total, sale) => {
     return total + (sale.sales || 0);
   }, 0);
@@ -18,4 +17,4 @@ const CafeSummary = ({ cafes = [] }) => {
   );
 };
 
-export default CafeSummary;
+export default CafeSummarySales;

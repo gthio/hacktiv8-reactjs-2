@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
-import { formatCurrency } from '../utils/currency';
+import { formatCurrency } from '../utils/formatCurrency';
+import { formatNumber } from '../utils/formatNumber';
 
 function CafeCard({ cafe }) {
   const navigate = useNavigate();
@@ -29,6 +30,10 @@ function CafeCard({ cafe }) {
         {cafe.city} - {cafe.province}
       </p>
       <p>Penjualan: {formatCurrency(cafe.sales)}</p>
+      <p>Transaksi: {formatNumber(cafe.transactions)}</p>
+      <p>
+        Rata-rata: {formatNumber(Math.round(cafe.sales / cafe.transactions))}
+      </p>
     </div>
   );
 }

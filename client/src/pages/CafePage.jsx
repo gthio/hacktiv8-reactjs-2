@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import CafeList from '../components/CafeList';
-import CafeSummary from '../components/CafeSummary';
+import CafeSummaryAverage from '../components/CafeSummaryAverage';
+import CafeSummarySales from '../components/CafeSummarySales';
+import CafeSummaryTransactions from '../components/CafeSummaryTransactions';
 import { useCafeList } from '../hooks/useCafeList'; // Add this import
 
 function CafePage() {
@@ -17,7 +19,9 @@ function CafePage() {
         onChange={e => setSearchCriteria(e.target.value)}
         style={{ marginBottom: '20px', padding: '8px', width: '300px' }}
       />
-      <CafeSummary cafes={cafes} />
+      <CafeSummarySales cafes={cafes} />
+      <CafeSummaryTransactions cafes={cafes} />
+      <CafeSummaryAverage cafes={cafes} />
       <CafeList cafes={cafes} />
     </div>
   );

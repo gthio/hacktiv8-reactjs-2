@@ -1,0 +1,30 @@
+<svg width="220" height="200" viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Roof -->
+  <path d="M30 80 Q110 20 190 80" fill="none" stroke="black" stroke-width="3" />
+
+  <!-- Awning -->
+  <rect x="30" y="80" width="160" height="25" fill="none" stroke="black" stroke-width="2" />
+  <!-- Awning scallops -->
+  <path d="M30 105 Q35 115 40 105 Q45 115 50 105 Q55 115 60 105 Q65 115 70 105
+           Q75 115 80 105 Q85 115 90 105 Q95 115 100 105 Q105 115 110 105
+           Q115 115 120 105 Q125 115 130 105 Q135 115 140 105 Q145 115 150 105
+           Q155 115 160 105 Q165 115 170 105 Q175 115 180 105 Q185 115 190 105"
+        fill="none" stroke="black" stroke-width="1" />
+
+  <!-- Building body -->
+  <rect x="30" y="105" width="160" height="80" rx="5" ry="5" fill="none" stroke="black" stroke-width="3" />
+
+  <!-- Door -->
+  <rect x="95" y="135" width="30" height="50" rx="3" ry="3" fill="none" stroke="black" stroke-width="2" />
+  <!-- Door knob -->
+  <circle cx="120" cy="160" r="1.5" fill="black" />
+
+  <!-- Round windows -->
+  <circle cx="55" cy="125" r="10" fill="none" stroke="black" stroke-width="2" />
+  <circle cx="165" cy="125" r="10" fill="none" stroke="black" stroke-width="2" />
+
+  <!-- Cafe sign with coffee cup -->
+  <text x="110" y="73" font-size="14" font-family="Arial, sans-serif" fill="black" text-anchor="middle">
+    ☕ CAFE
+  </text>
+</svg>

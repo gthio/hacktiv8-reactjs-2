@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
+import { buildApiUrl, API_ENDPOINTS } from '../config/api';
 
 export function useCafe(id) {
   const [cafe, setCafe] = useState(null);
@@ -8,7 +9,7 @@ export function useCafe(id) {
   const fetchCafe = useCallback(async () => {
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:3001/cafes?cafe_id=${id}`);
+      const response = await fetch(buildApiUrl(API_ENDPOINTS.CAFES, { cafe_id: id }));
 
       if (!response.ok) {
         throw new Error('Failed to fetch cafe details');

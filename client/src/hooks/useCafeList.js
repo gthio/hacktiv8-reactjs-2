@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { buildApiUrl, API_ENDPOINTS } from '../config/api';
 
 export function useCafeList(criteria = null) {
   const [cafes, setCafes] = useState([]);
@@ -8,11 +9,7 @@ export function useCafeList(criteria = null) {
   async function fetchCafeList() {
     try {
       setLoading(true);
-      let url = `http://localhost:3001/cafes`;
-
-      if (criteria) {
-        url += `?q=${criteria}`;
-      }
+      const url = buildApiUrl(API_ENDPOINTS.CAFES, criteria ? { q: criteria } : {});
 
       console.log(url);
 

@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import CafeList from '../components/CafeList';
-import CafeSummaryAverage from '../components/CafeSummaryAverage';
-import CafeSummarySales from '../components/CafeSummarySales';
-import CafeSummaryTransactions from '../components/CafeSummaryTransactions';
+import CafeSummaryCard from '../components/CafeSummaryCard';
 import { useCafeList } from '../hooks/useCafeList';
+import useCafeSummary from '../hooks/useCafeSummary';
 
 function CafePage() {
   const [searchCriteria, setSearchCriteria] = useState('');
   const { cafes, loading, error } = useCafeList(searchCriteria);
+  const { totalSales, totalTransactions, averageAmount } = useCafeSummary();
 
   return (
     <div className="min-h-screen bg-gray-50 p-6">
@@ -27,9 +27,21 @@ function CafePage() {
 
       {/* Summary Section */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <CafeSummarySales cafes={cafes} />
-        <CafeSummaryTransactions cafes={cafes} />
-        <CafeSummaryAverage cafes={cafes} />
+        <CafeSummaryCard
+          title="Total Penjualan"
+          content={totalSales}
+          color="bg-green-500"
+        />
+        <CafeSummaryCard
+          title="Total Transaksi"
+          content={totalTransactions}
+          color="bg-blue-500"
+        />
+        <CafeSummaryCard
+          title="Rata-rata Penjualan"
+          content={averageAmount}
+          color="bg-yellow-500"
+        />
       </div>
 
       {/* Cafe List Section */}
